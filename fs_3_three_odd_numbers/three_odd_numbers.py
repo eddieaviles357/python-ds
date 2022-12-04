@@ -13,10 +13,7 @@ def three_odd_numbers(nums):
         >>> three_odd_numbers([1, 2, 3, 3, 2])
         False
     """
-
-
-def three_odd_numbers(nums):
     for idx in range(len(nums) - 2):  # if any 3 sequential sum total is odd return True
-        if (nums[idx] + nums[idx + 1] + nums[idx + 2] % 2 != 0):
+        if (nums[idx] + nums[idx + 1] + nums[idx + 2]) % 2 == 1:
             return True
     return False  # no sums were odd
